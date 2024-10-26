@@ -1,0 +1,26 @@
+  // Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+#include <math.io>
+
+
+
+int main() {
+ int num,val;
+ int sum=0;
+ scanf("%d",&num);
+ for (int i=1;i<num;i++){
+     for(int j=0 ;j<i;j++){
+     val=i;
+     printf("%d",9);}
+     printf(" ");
+     
+ }
+
+for (int i=1;i<num;i++){
+    sum=
+}
+ 
+ 
+    return 0;
+}

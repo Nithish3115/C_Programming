@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char P[1000001]; // assuming max length of password is 10^6
+    printf("Enter the password: ");
+    fgets(P, 1000001, stdin);
+    printf("%d",strlen(P));
+    P[strcspn(P, "\n")] = 0; // remove newline character
+    printf("%d",strlen(P));
+
+
+    int n = strlen(P);
+    char R[n+1];
+    for (int i = 0; i < n; i++) {
+        R[i] = P[n-i-1];
+    }
+    R[n] = '\0'; // null-terminate the reversed string
+
+    if (strcmp(P, R) == 0) {
+        printf("Password is Vulnerable\n");
+    } else {
+        printf("Password is Non-Vulnerable\n");
+    }
+
+    return 0;
+}

@@ -1,0 +1,29 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  
+ char s[100] = {"listen"};
+ char l[100]= {"silents" };
+ 
+ int t[26]={0};
+int len=strlen(s);
+for(int i=0;i<len;i++){
+    t[s[i]-'a']++;
+    t[l[i]-'a']--;
+}
+for(int i=0;i<=26;i++){
+    if(t[i]!=0){
+        printf("no");
+        break;
+    }
+    else{
+        printf("yes");
+        break;
+    }
+}
+
+ 
+    return 0;
+}

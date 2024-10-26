@@ -1,0 +1,37 @@
+ // Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+            int arr[]={1, 2, 2, 3, 4, 4, 4,4,4,4,4,4,4, 5, 5};
+            int size=sizeof(arr)/sizeof(arr[0]);
+            int fre[size];
+            for (int i=0;i<size;i++){
+                            int k=1;
+                           int no=arr[i];
+                for(int j=i+1;j<size;j++){
+                    
+                    if(no==arr[j]){
+                                    
+
+                        k++;
+                        fre[j]=-1;
+                    }
+                }
+                if(fre[i]!=-1){
+ 
+                    fre[i]=k;
+                }
+                
+            }
+            int siz=sizeof(fre)/sizeof(fre[0]);
+            int final=0;
+            for(int i=0;i<siz-1;i++){
+                if(fre[i]>1){
+                    final++;
+                }
+            }
+            
+            printf("%d",final);
+   
+    return 0;
+}

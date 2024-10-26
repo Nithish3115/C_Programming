@@ -1,0 +1,36 @@
+  
+
+#include <stdio.h>
+
+int min_denominations(int amount, int denominations[], int size) {
+    int table[amount + 1];
+    table[0] = 0;
+
+    for (int i = 1; i <= amount; i++) {
+        table[i] = amount + 1; // initialize to a large number
+        for (int j = 0; j < size; j++) {
+            if (i - denominations[j] >= 0) {
+                int sub_res = table[i - denominations[j]];
+                if (sub_res < table[i]) {
+                    table[i] = sub_res + 1;
+                }
+            }
+        }
+    }
+
+    return table[amount];
+}
+
+int main() {
+     int amount ; 
+         scanf("%d",&amount);
+
+    int denominations[] = {10, 5, 1};
+    int size = sizeof(denominations) / sizeof(denominations[0]);
+
+    int result = min_denominations(amount, denominations, size);
+
+    printf("Number of denominations for amount %d: %d\n", amount, result);
+
+    return 0;
+}

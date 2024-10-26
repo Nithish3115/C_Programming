@@ -1,0 +1,38 @@
+  
+
+
+#include <stdio.h>
+ 
+
+int main() {
+    int arr[] = {1, 3, 4, 7, 8, 9};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int k=0;
+   for (int i=0;i<n;i++){
+       for(int j=i+1;j<n;j++){
+       if(arr[i]>=arr[j]){
+           k=arr[i];
+           arr[i]=arr[j];
+           arr[j]=k;
+       }
+       }
+  }
+  int m=0;
+  if(n%2!=0){
+      m=(n-1)/2;
+        
+    //   printf("%f\n",m);
+      printf("%d",arr[m]);
+  }
+  if(n%2==0){
+     int  m=(n/2);
+    //  int l=m;
+      int k=arr[m]+arr[m-1];
+      
+      printf("%.1f",k/2.0);
+  }
+ 
+      
+  
+     return 0;
+}

@@ -1,0 +1,26 @@
+ 
+
+
+#include <stdio.h>
+ 
+
+int main() {
+    int arr[] = {1,2,3,7};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int k=0;
+   for (int i=0;i<n;i++){
+        
+           k=k+arr[i];
+            
+       }
+       
+  float m=n;
+  
+      
+      printf("%.2f",k/m);
+  
+ 
+      
+  
+     return 0;
+}

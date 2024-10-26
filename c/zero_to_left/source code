@@ -1,0 +1,25 @@
+  // Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+     int k=0;
+    
+  int arr[]={ 10 ,20 ,0 ,40 ,50};
+ int size=sizeof(arr)/sizeof(arr[0]);
+
+for(int i=0;i<size;i++){
+     
+    if(arr[i]!=0){
+        arr[k]=arr[i];
+        k++;
+    }
+}
+for(int j=k;j<size;j++){
+    arr[j]=0;
+}
+for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+  
+    return 0;
+}

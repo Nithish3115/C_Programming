@@ -1,0 +1,33 @@
+  
+// left rotation
+ #include <stdio.h>
+ 
+
+int main() {
+      
+     
+      
+      int arr[]={-2, 3, -4, 5};
+      int n=sizeof(arr)/sizeof(arr[0]);
+      int f[n];
+      int sum=1;
+      for (int i=0;i<n;i++){
+          sum=1;
+           int k=arr[i];
+           arr[i]=1;
+          for (int j=0;j<n;j++){
+              sum=sum*arr[j];
+          }
+           arr[i]=k;
+                      printf("%d\n",sum);
+
+      }
+       
+       
+    
+
+    return 0;
+}
+
+
+ 

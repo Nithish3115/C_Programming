@@ -1,0 +1,53 @@
+ // Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+ int num,cpy,f_l,l_l,temp,o;
+ int k=0;
+ scanf("%d",&num);
+ cpy=num;
+ 
+ while(cpy!=0){
+     cpy=cpy/10;
+     k=k+1;
+ }
+ 
+ cpy=num;
+ int arr[k-1];
+ o=k;
+  
+  while(o!=0){
+      cpy=num%10;
+      arr[o-1]=cpy;    
+      num=num/10;
+o--;
+  }
+  
+  temp=arr[0];
+  arr[0]=arr[k-1];
+  arr[k-1]=temp;
+ 
+  for (int i=0;i<k;i++){
+      printf("%d",arr[i]);
+  }
+
+
+// or//
+// void change(char num[]){
+//     int len=strlen(num);
+//     char f,l,temp;
+//     temp=num[0];
+//     num[0]=num[len-1];
+//     num[len-1]=temp;
+    
+// }     
+// char num[100]   ;
+//  scanf("%s",&num);
+//  change(num);
+ 
+//  printf("%s",num);
+     
+     
+  
+    return 0;
+}
